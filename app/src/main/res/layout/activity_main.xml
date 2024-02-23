@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ventanaPrincipal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tituloLayout"
+        android:layout_width="match_parent"
+        android:layout_height="191dp"
+        android:layout_marginBottom="66dp"
+        android:background="@color/gris"
+        app:layout_constraintBottom_toTopOf="@+id/inputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tituloTextView"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="63dp"
+            android:layout_marginEnd="63dp"
+            android:layout_marginBottom="34dp"
+            android:fontFamily="@font/comic_neue_light"
+            android:text="@string/titulo"
+            android:textAlignment="center"
+            android:textColor="@color/azul"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/inputLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="35dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloLayout">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/usuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:fontFamily="@font/comic_neue_light"
+                android:hint="USUARIO"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/contrasena"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="CONTRASEÑA"
+                android:fontFamily="@font/comic_neue_light"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/botonAcceder"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_marginTop="14sp"
+            android:text="Acceder"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/textoNuevoRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comic_neue_light"
+            android:textColor="@color/azul"
+            android:textSize="20sp"
+            android:layout_marginTop="14sp"
+            android:text="Regístrate aquí, si no lo estás ya." />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

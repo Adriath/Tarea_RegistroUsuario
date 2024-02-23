@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/vetanaSecundaria"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecActivity">
+
+    <TextView
+        android:id="@+id/textViewCabecera"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="26dp"
+        android:fontFamily="@font/comic_neue_light"
+        android:text="Encabezado"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvMigasDePan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMigasDePan"
+        android:layout_width="212dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="165dp"
+        android:fontFamily="@font/comic_neue_light"
+        android:text="Inicio > Actividad 1"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/botonActividad2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCabecera" />
+
+    <Button
+        android:id="@+id/botonActividad2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="253dp"
+        android:backgroundTint="#FDF6FE"
+        android:text="IR A ACTIVIDAD 2"
+        android:textColor="@color/black"
+        app:cornerRadius="@android:dimen/system_app_widget_background_radius"
+        app:layout_constraintBottom_toTopOf="@+id/botonVolver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMigasDePan"
+        app:strokeColor="#00BCD4"
+        app:strokeWidth="4dp" />
+
+    <Button
+        android:id="@+id/botonVolver"
+        android:layout_width="52dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="33dp"
+        android:alpha="1"
+        android:backgroundTint="@color/white"
+        android:drawableBottom="@drawable/ic_flecha_atras"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonActividad2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

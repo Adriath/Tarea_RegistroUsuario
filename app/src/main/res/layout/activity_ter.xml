@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/VentanaTerciaria"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TerActivity">
+
+    <TextView
+        android:id="@+id/tvMigasDePan"
+        android:layout_width="267dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="596dp"
+        android:fontFamily="@font/comic_neue_light"
+        android:text="Inicio > Actividad 1 > Actividad 2"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonVolver" />
+
+    <Button
+        android:id="@+id/botonVolver"
+        android:layout_width="50dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="40dp"
+        android:alpha="1"
+        android:backgroundTint="@color/white"
+        android:drawableBottom="@drawable/ic_flecha_atras"
+        app:layout_constraintBottom_toTopOf="@+id/tvMigasDePan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
