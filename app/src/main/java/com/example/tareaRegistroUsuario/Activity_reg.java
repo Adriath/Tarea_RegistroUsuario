@@ -14,7 +14,7 @@ import com.google.android.material.textfield.TextInputEditText;
 public class Activity_reg extends AppCompatActivity {
 
     private TextInputEditText usuarioRegistro, passwordRegistro ;
-    private Button botonRegistrar ;
+    private Button botonRegistrar, botonVolver ;
 
     private DBHandler dbHandler ;
 
@@ -29,6 +29,7 @@ public class Activity_reg extends AppCompatActivity {
         usuarioRegistro = findViewById(R.id.tv_usuarioRegistro) ;
         passwordRegistro = findViewById(R.id.textoPasswordRegistro) ;
         botonRegistrar = findViewById(R.id.botonRegistrar) ;
+        botonVolver = findViewById(R.id.botonVolverRegistro) ;
 
         // Conexión BBDD
 
@@ -62,6 +63,16 @@ public class Activity_reg extends AppCompatActivity {
                 usuarioRegistro.setText("") ;
                 passwordRegistro.setText("") ;
             }
+
         });
+
+        botonVolver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                finish() ;
+            }
+        });
+
     }
 }

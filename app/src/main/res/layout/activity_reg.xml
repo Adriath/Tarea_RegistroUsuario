@@ -11,9 +11,9 @@
 
     <TextView
         android:id="@+id/tituloRegistro"
-        android:layout_width="461dp"
-        android:layout_height="207dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="436dp"
+        android:layout_height="193dp"
+        android:layout_marginBottom="23dp"
         android:background="@color/gris"
         android:fontFamily="@font/comic_neue_light"
         android:gravity="center"
@@ -24,13 +24,13 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/TV_migasPanRegistro"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-22dp" />
+        tools:layout_editor_absoluteX="-15dp" />
 
     <LinearLayout
         android:id="@+id/LY_areaRegistro"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="82dp"
+        android:layout_marginBottom="11dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,15 +69,26 @@
             android:layout_marginTop="14sp"
             android:text="Registrarse"
             android:textSize="19sp" />
+
+        <Button
+            android:id="@+id/botonVolverRegistro"
+            android:layout_width="59dp"
+            android:layout_height="55dp"
+            android:alpha="1"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="20dp"
+            android:backgroundTint="@color/white"
+            android:drawableBottom="@drawable/ic_flecha_atras" />
+
     </LinearLayout>
 
     <TextView
         android:id="@+id/TV_migasPanRegistro"
-        android:layout_width="373dp"
-        android:layout_height="45dp"
+        android:layout_width="362dp"
+        android:layout_height="46dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="9dp"
         android:text="Inicio > Pantalla de registro"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/LY_areaRegistro"
