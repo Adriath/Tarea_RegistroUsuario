@@ -54,7 +54,7 @@
             android:layout_height="83dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/TV_passwordRegistro"
+                android:id="@+id/textoPasswordRegistro"
                 android:layout_width="match_parent"
                 android:layout_height="62dp"
                 android:layout_marginHorizontal="14sp"

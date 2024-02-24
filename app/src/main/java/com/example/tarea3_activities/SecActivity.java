@@ -11,10 +11,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class SecActivity extends AppCompatActivity {
 
-    TextView encabezado ;
-    TextView migasDePan ;
-    Button botonActividad2 ;
-    Button volver ;
+    private TextView encabezado ;
+    private TextView migasDePan ;
+    private Button botonActividad2 ;
+    private Button volver ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

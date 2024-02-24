@@ -20,18 +20,18 @@ public class MainActivity extends AppCompatActivity {
     // DECLARACIONES
 
      // Componentes de la interfaz gráfica
-    TextInputEditText nombre ;
-    TextInputEditText contrasena ;
-    TextView textoNuevoRegistro ;
-    Button botonAcceder ;
+    private TextInputEditText nombre ;
+    private TextInputEditText contrasena ;
+    private TextView textoNuevoRegistro ;
+    private Button botonAcceder ;
 
     // Datos que introduce el usuario
-    String usuarioIntroducido ;
-    String contrasenaIntroducida ;
+    private String usuarioIntroducido ;
+    private String contrasenaIntroducida ;
 
     // Datos válidos con los que vamos a contrastar para acceder
-    final String USUARIO_VALIDO = "FEDERICO" ;
-    final String CONTRASENA_VALIDA = "alumno@" ;
+    private final String USUARIO_VALIDO = "FEDERICO" ;
+    private final String CONTRASENA_VALIDA = "alumno@" ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

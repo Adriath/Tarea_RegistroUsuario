@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class TerActivity extends AppCompatActivity {
 
-    Button volver ;
+    private Button volver ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
