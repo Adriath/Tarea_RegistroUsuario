@@ -11,9 +11,9 @@
 
     <TextView
         android:id="@+id/tituloRegistro"
-        android:layout_width="461dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="70dp"
+        android:layout_width="465dp"
+        android:layout_height="231dp"
+        android:layout_marginBottom="114dp"
         android:background="@color/gris"
         android:fontFamily="@font/comic_neue_light"
         android:gravity="center"
@@ -21,20 +21,22 @@
         android:textAlignment="center"
         android:textColor="@color/azul"
         android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/LY_areaRegistro"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-21dp" />
+        tools:layout_editor_absoluteX="-24dp" />
 
     <LinearLayout
         android:id="@+id/LY_areaRegistro"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="418dp"
+        android:layout_height="326dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="103dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tituloRegistro">
 
