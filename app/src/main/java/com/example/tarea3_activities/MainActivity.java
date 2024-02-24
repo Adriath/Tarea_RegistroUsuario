@@ -2,8 +2,13 @@ package com.example.tarea3_activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
      // Componentes de la interfaz gráfica
     TextInputEditText nombre ;
     TextInputEditText contrasena ;
+    TextView textoNuevoRegistro ;
     Button botonAcceder ;
 
     // Datos que introduce el usuario
@@ -36,6 +42,32 @@ public class MainActivity extends AppCompatActivity {
         nombre = findViewById(R.id.usuario) ;
         contrasena = findViewById(R.id.contrasena) ;
         botonAcceder = findViewById(R.id.botonAcceder) ;
+        textoNuevoRegistro = findViewById(R.id.textoNuevoRegistro) ;
+
+        String textoCompleto = String.valueOf(textoNuevoRegistro.getText()) ;
+        String textoEnlace = "aquí";
+
+        SpannableString spannableString = new SpannableString(textoCompleto);
+
+        int startIndex = textoCompleto.indexOf(textoEnlace) ;
+
+        ClickableSpan clickableSpan = new ClickableSpan() {
+            @Override
+            public void onClick(View view) {
+                // Acción a realizar cuando se hace clic en el enlace
+                Intent intent = new Intent(MainActivity.this, Activity_reg.class);
+                startActivity(intent);
+            }
+        };
+
+        // Aplicar el ClickableSpan a la parte del texto que será el enlace
+        spannableString.setSpan(clickableSpan, startIndex, startIndex + textoEnlace.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE) ;
+
+        // Establecer el texto en el TextView
+        textoNuevoRegistro.setText(spannableString) ;
+
+        // Hacer que el enlace sea clickable
+        textoNuevoRegistro.setMovementMethod(LinkMovementMethod.getInstance()) ;
 
         // LISTENERS
 
@@ -47,24 +79,26 @@ public class MainActivity extends AppCompatActivity {
                 usuarioIntroducido = nombre.getText().toString() ;
                 contrasenaIntroducida = contrasena.getText().toString() ;
 
-                String mensaje = "";
-
-                if (usuarioIntroducido.equals(USUARIO_VALIDO) && contrasenaIntroducida.equals(CONTRASENA_VALIDA))
-                {
-                    mensaje = "Acceso válido" ;
+//                String mensaje = "";
+//
+//                if (usuarioIntroducido.equals(USUARIO_VALIDO) && contrasenaIntroducida.equals(CONTRASENA_VALIDA))
+//                {
+//                    mensaje = "Acceso válido" ;
 
                     Intent intentoActivitySec = new Intent(MainActivity.this, SecActivity.class) ;
                     intentoActivitySec.putExtra("nombreUsuario", usuarioIntroducido) ;
                     startActivity(intentoActivitySec) ;
 
-                }
-                else
-                {
-                    mensaje = "Las credenciales son incorrectas" ;
-                }
+//                }
+//                else
+//                {
+//                    mensaje = "Las credenciales son incorrectas" ;
+//                }
 
-                Toast.makeText(MainActivity.this, mensaje, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this, mensaje, Toast.LENGTH_SHORT).show();
             }
+
+
         });
 
     }

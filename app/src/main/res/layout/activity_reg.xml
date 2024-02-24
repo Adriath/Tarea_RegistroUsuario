@@ -11,9 +11,9 @@
 
     <TextView
         android:id="@+id/tituloRegistro"
-        android:layout_width="465dp"
-        android:layout_height="231dp"
-        android:layout_marginBottom="114dp"
+        android:layout_width="461dp"
+        android:layout_height="207dp"
+        android:layout_marginBottom="24dp"
         android:background="@color/gris"
         android:fontFamily="@font/comic_neue_light"
         android:gravity="center"
@@ -22,23 +22,20 @@
         android:textColor="@color/azul"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/LY_areaRegistro"
+        app:layout_constraintBottom_toTopOf="@+id/TV_migasPanRegistro"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-24dp" />
+        tools:layout_editor_absoluteX="-22dp" />
 
     <LinearLayout
         android:id="@+id/LY_areaRegistro"
-        android:layout_width="418dp"
-        android:layout_height="326dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="103dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="82dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tituloRegistro">
+        app:layout_constraintTop_toBottomOf="@+id/TV_migasPanRegistro">
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -73,5 +70,19 @@
             android:text="Registrarse"
             android:textSize="19sp" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/TV_migasPanRegistro"
+        android:layout_width="373dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="Inicio > Pantalla de registro"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/LY_areaRegistro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloRegistro" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
