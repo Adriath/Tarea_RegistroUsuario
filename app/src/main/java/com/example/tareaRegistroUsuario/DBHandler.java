@@ -11,13 +11,13 @@ public class DBHandler extends SQLiteOpenHelper {
     // below variable is for our database name.
     private static final String DB_NAME = "usuariosDB";
     private static final int DB_VERSION = 1;
-    private static final String TABLE_NAME = "mycourses";
+    private static final String TABLE_NAME = "usuario";
 
     private static final String ID_COL = "id";
 
-    private static final String NAME_COL = "name";
+    private static final String NAME_COL = "nombre";
 
-    private static final String PASSWORD_COL = "password";
+    private static final String PASSWORD_COL = "contraseña";
 
 
     // creating a constructor for our database handler.
