@@ -1,4 +1,4 @@
-package com.example.tarea3_activities;
+package com.example.tareaRegistroUsuario;
 
 import android.content.ContentValues;
 import android.content.Context;

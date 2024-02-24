@@ -1,4 +1,4 @@
-package com.example.tarea3_activities;
+package com.example.tareaRegistroUsuario;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.tarea3_activities.R;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class Activity_reg extends AppCompatActivity {
@@ -52,6 +53,8 @@ public class Activity_reg extends AppCompatActivity {
                 }
 
                 // Añadir datos a la BBDD
+
+                dbHandler.addNewUsuario(usuario, password) ;
 
                 // Mensaje de confirmación
                 Toast.makeText(Activity_reg.this, "Se han guardado los datos correctamente", Toast.LENGTH_SHORT).show() ;

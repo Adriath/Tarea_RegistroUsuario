@@ -5,7 +5,7 @@
     android:id="@+id/vetanaSecundaria"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecActivity">
+    tools:context="com.example.tareaRegistroUsuario.SecActivity">
 
     <TextView
         android:id="@+id/textViewCabecera"

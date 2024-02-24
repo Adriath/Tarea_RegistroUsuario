@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     app:layoutDescription="@xml/activity_reg_scene"
-    tools:context=".Activity_reg">
+    tools:context="com.example.tareaRegistroUsuario.Activity_reg">
 
     <TextView
         android:id="@+id/tituloRegistro"
