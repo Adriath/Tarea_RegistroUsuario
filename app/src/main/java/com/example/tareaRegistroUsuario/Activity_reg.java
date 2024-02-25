@@ -48,8 +48,8 @@ public class Activity_reg extends AppCompatActivity {
 
                 // Mensaje de error si no se introduce ningún dato
 
-                if (usuario.isEmpty() && password.isEmpty()) {
-                    Toast.makeText(Activity_reg.this, "Debes introducir algún dato", Toast.LENGTH_SHORT).show();
+                if (usuario.isEmpty() || password.isEmpty()) {
+                    Toast.makeText(Activity_reg.this, "Debes introducir todos los datos", Toast.LENGTH_SHORT).show();
                     return ;
                 }
 

@@ -5,6 +5,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+
 public class DBHandler extends SQLiteOpenHelper {
 
     // creating a constant variables for our database.
@@ -48,7 +50,7 @@ public class DBHandler extends SQLiteOpenHelper {
         // on below line we are creating a variable for
         // our sqlite database and calling writable method
         // as we are writing data in our database.
-        SQLiteDatabase db = this.getWritableDatabase();
+        SQLiteDatabase db = this.getWritableDatabase() ;
 
         // on below line we are creating a
         // variable for content values.
@@ -67,6 +69,8 @@ public class DBHandler extends SQLiteOpenHelper {
         // database after adding database.
         db.close();
     }
+
+
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
