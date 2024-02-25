@@ -35,7 +35,7 @@ public class SecActivity extends AppCompatActivity {
 
         String nombreUsuario = intento.getStringExtra("nombreUsuario") ;
 
-        encabezado.setText("BIENVENIDO A NUESTRA PÁGINA PRINCIPAL, " + nombreUsuario) ;
+        encabezado.setText("BIENVENIDO A NUESTRA PÁGINA PRINCIPAL, " + nombreUsuario.toUpperCase()) ;
 
         // ESCUCHADOR DEL BOTÓN PARA IR A LA ACTIVIDAD 2
         botonActividad2.setOnClickListener(new View.OnClickListener() {

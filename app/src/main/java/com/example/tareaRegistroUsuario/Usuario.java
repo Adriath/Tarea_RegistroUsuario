@@ -43,7 +43,7 @@ public class Usuario {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Usuario usuario = (Usuario) o;
-        return Objects.equals(nombre, usuario.nombre) && Objects.equals(password, usuario.password);
+        return Objects.equals(nombre.toLowerCase(), usuario.nombre.toLowerCase()) && Objects.equals(password, usuario.password);
     }
 
     @Override

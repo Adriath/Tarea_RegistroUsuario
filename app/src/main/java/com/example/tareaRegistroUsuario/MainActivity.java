@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         // Hacer que el enlace sea clickable
         textoNuevoRegistro.setMovementMethod(LinkMovementMethod.getInstance()) ;
 
+
         // LISTENERS
 
         // Listener del botón de acceso
@@ -120,5 +121,16 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+
     }
+
+    // Para vaciar los campos del formulario al volver a él
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Limpiar los campos del formulario
+        nombre.setText("");
+        contrasena.setText("");
+    }
+
 }
