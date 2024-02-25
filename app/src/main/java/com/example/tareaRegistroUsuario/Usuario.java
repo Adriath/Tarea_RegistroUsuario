@@ -1,5 +1,7 @@
 package com.example.tareaRegistroUsuario;
 
+import java.util.Objects;
+
 public class Usuario {
 
     private int id ;
@@ -37,6 +39,19 @@ public class Usuario {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Usuario usuario = (Usuario) o;
+        return Objects.equals(nombre, usuario.nombre) && Objects.equals(password, usuario.password);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombre, password);
+    }
+
+    @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("com.example.tareaRegistroUsuario.Usuario{");
         sb.append("id=").append(id);
@@ -44,5 +59,7 @@ public class Usuario {
         sb.append(", password='").append(password).append('\'');
         sb.append('}');
         return sb.toString();
+
+
     }
 }

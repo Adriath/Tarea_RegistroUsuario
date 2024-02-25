@@ -1,5 +1,6 @@
 package com.example.tareaRegistroUsuario;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.tarea3_activities.R;
+import com.google.android.material.textfield.TextInputEditText;
 
 public class SecActivity extends AppCompatActivity {
 
@@ -16,6 +18,7 @@ public class SecActivity extends AppCompatActivity {
     private TextView migasDePan ;
     private Button botonActividad2 ;
     private Button volver ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

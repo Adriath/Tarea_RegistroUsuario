@@ -9,6 +9,7 @@ import android.text.style.ClickableSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -30,10 +31,6 @@ public class MainActivity extends AppCompatActivity {
     // Datos que introduce el usuario
     private String usuarioIntroducido ;
     private String contrasenaIntroducida ;
-
-    // Datos válidos con los que vamos a contrastar para acceder
-    private final String USUARIO_VALIDO = "FEDERICO" ;
-    private final String CONTRASENA_VALIDA = "alumno@" ;
 
     private DBHandler dbHandler ;
     private ArrayList<Usuario> usuarioArrayList ;
@@ -89,23 +86,35 @@ public class MainActivity extends AppCompatActivity {
                 usuarioIntroducido = nombre.getText().toString() ;
                 contrasenaIntroducida = contrasena.getText().toString() ;
 
-//                String mensaje = "";
-//
-//                if (usuarioIntroducido.equals(USUARIO_VALIDO) && contrasenaIntroducida.equals(CONTRASENA_VALIDA))
-//                {
-//                    mensaje = "Acceso válido" ;
+                Usuario usuarioComprobacion = new Usuario(usuarioIntroducido, contrasenaIntroducida) ;
 
-//                    Intent intentoActivitySec = new Intent(MainActivity.this, SecActivity.class) ;
-//                    intentoActivitySec.putExtra("nombreUsuario", usuarioIntroducido) ;
-//                    startActivity(intentoActivitySec) ;
+                String mensaje = "";
+                boolean valido = false ;
 
-//                }
-//                else
-//                {
-//                    mensaje = "Las credenciales son incorrectas" ;
-//                }
+                for (Usuario usuarioBBDD: usuarioArrayList){
 
-//                Toast.makeText(MainActivity.this, mensaje, Toast.LENGTH_SHORT).show();
+                   if (usuarioBBDD.equals(usuarioComprobacion)){
+
+                           valido = true ;
+                           break ;
+                   }
+                }
+
+                if (valido)
+                {
+                    mensaje = "Acceso válido" ;
+
+                    Intent intentoActivitySec = new Intent(MainActivity.this, SecActivity.class) ;
+                    intentoActivitySec.putExtra("nombreUsuario", usuarioIntroducido) ;
+                    startActivity(intentoActivitySec) ;
+
+                }
+                else
+                {
+                    mensaje = "Las credenciales son incorrectas" ;
+                }
+
+                Toast.makeText(MainActivity.this, mensaje, Toast.LENGTH_SHORT).show();
             }
 
 

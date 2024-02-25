@@ -83,8 +83,8 @@ public class DBHandler extends SQLiteOpenHelper {
 
             do{
                 usuarioArrayList.add(new Usuario(
-                        cursorUsuario.getString(0),
-                        cursorUsuario.getString(1))) ;
+                        cursorUsuario.getString(1),
+                        cursorUsuario.getString(2))) ;
             } while (cursorUsuario.moveToNext()) ;
         }
 
