@@ -1,3 +1,5 @@
+package com.example.tareaRegistroUsuario;
+
 public class Usuario {
 
     private int id ;
@@ -36,7 +38,7 @@ public class Usuario {
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer("Usuario{");
+        final StringBuffer sb = new StringBuffer("com.example.tareaRegistroUsuario.Usuario{");
         sb.append("id=").append(id);
         sb.append(", nombre='").append(nombre).append('\'');
         sb.append(", password='").append(password).append('\'');

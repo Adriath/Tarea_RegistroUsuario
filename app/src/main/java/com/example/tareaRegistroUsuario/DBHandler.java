@@ -2,6 +2,7 @@ package com.example.tareaRegistroUsuario;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -70,6 +71,27 @@ public class DBHandler extends SQLiteOpenHelper {
         db.close();
     }
 
+    public ArrayList<Usuario> readUsuario(){
+
+        SQLiteDatabase db = this.getReadableDatabase() ;
+
+        Cursor cursorUsuario = db.rawQuery("SELECT * FROM " + TABLE_NAME, null) ;
+
+        ArrayList<Usuario> usuarioArrayList = new ArrayList<>() ;
+
+        if (cursorUsuario.moveToFirst()){
+
+            do{
+                usuarioArrayList.add(new Usuario(
+                        cursorUsuario.getString(0),
+                        cursorUsuario.getString(1))) ;
+            } while (cursorUsuario.moveToNext()) ;
+        }
+
+        cursorUsuario.close() ;
+
+        return usuarioArrayList ;
+    }
 
 
     @Override

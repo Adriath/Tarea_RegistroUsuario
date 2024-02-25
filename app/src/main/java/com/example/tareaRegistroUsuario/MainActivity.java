@@ -15,6 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.tarea3_activities.R;
 import com.google.android.material.textfield.TextInputEditText;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     // DECLARACIONES
@@ -33,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
     private final String USUARIO_VALIDO = "FEDERICO" ;
     private final String CONTRASENA_VALIDA = "alumno@" ;
 
+    private DBHandler dbHandler ;
+    private ArrayList<Usuario> usuarioArrayList ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
         contrasena = findViewById(R.id.contrasena) ;
         botonAcceder = findViewById(R.id.botonAcceder) ;
         textoNuevoRegistro = findViewById(R.id.textoNuevoRegistro) ;
+
+        dbHandler = new DBHandler(MainActivity.this) ;
+        usuarioArrayList = dbHandler.readUsuario() ;
 
         String textoCompleto = String.valueOf(textoNuevoRegistro.getText()) ;
         String textoEnlace = "aquí";
@@ -76,6 +84,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                usuarioArrayList = dbHandler.readUsuario() ;
+
                 usuarioIntroducido = nombre.getText().toString() ;
                 contrasenaIntroducida = contrasena.getText().toString() ;
 
@@ -85,9 +95,9 @@ public class MainActivity extends AppCompatActivity {
 //                {
 //                    mensaje = "Acceso válido" ;
 
-                    Intent intentoActivitySec = new Intent(MainActivity.this, SecActivity.class) ;
-                    intentoActivitySec.putExtra("nombreUsuario", usuarioIntroducido) ;
-                    startActivity(intentoActivitySec) ;
+//                    Intent intentoActivitySec = new Intent(MainActivity.this, SecActivity.class) ;
+//                    intentoActivitySec.putExtra("nombreUsuario", usuarioIntroducido) ;
+//                    startActivity(intentoActivitySec) ;
 
 //                }
 //                else
